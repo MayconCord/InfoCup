@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.sub-3 {
+    font-weight: 500;
+}
+
+.bg-purple {
+    background-color: #400822;
+    color: white;
+}
+
+.font-purple {
+    color: #8C184E;
+}
+
+.content-n{
+    font-size: 14px;
+}
+
+.table-gp {
+    background-image: linear-gradient(to bottom,  #400822, #731440, #8C184E);
+    border-radius: 15px;
+}
+
+.card-body{
+    color:#400822;
+}
+
+.btn-card{
+    background: linear-gradient(to right, #400822, #731440, #8C184E);
+    font-size: 15px;
+    border: none;
+    color: white;
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+}
+.gradient {
+    background-image: linear-gradient(to bottom,  #400822, #8C184E);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: black;
+}
+
+.img-me {
+    width: 300px;
+    height: 300px;
+}
+
+.btn-submit {
+    background-color: #731440;
+    color: white;
+    padding: 0.7rem 0.7rem;
+    border: none;
+    border-radius: 15px;
+}
+
+.img-modal{
+    width: 400px;
+    height: 100%;
+}
+
+.caption-img {
+    font-size: 12px;
+}
+
+.img-cnt{
+    width: 300px;
+}
+
+.spc {
+    width: 200px;
+}

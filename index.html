@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link href="./css/bootstrap.css" rel="stylesheet">
+        <link rel="stylesheet" href="./css/style.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>InfoCup</title>
+    </head>
+
+    <body class="bg-dark">
+
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark" style="height: 8vh;">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/"><h3>InfoCup</h3></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </nav>
+
+        <div id="demo" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+            </div>
+            
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./imgs/um.png" alt="Logo Qatar 2022" class="d-block" style="width:100%">
+                    <div class="carousel-caption text-white">
+                        <h3>Copa do Mundo do Qatar 2022</h3>
+                        <p>Tudo sobre o maior evento esportivo do mundo você encontra aqui.</p>
+                        <p>Imagem - Reprodução/Twitter @roadto2022</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./imgs/dois.png" alt="Chicago" class="d-block" style="width:100%">
+                    <div class="carousel-caption">
+                        <h3>Conheça melhor o Qatar</h3>
+                        <p>Imagem - Criador: MariusLtu | Crédito: Getty Images/iStockphoto | Direitos autorais: Marius Dobilas</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./imgs/três.png" alt="New York" class="d-block" style="width:100%">
+                    <div class="carousel-caption">
+                        <h3>Um pouco de história</h3>
+                        <p>Imagem - Crédito: Getty Imagem</p>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+
+        <div class="container p-5 my-5 bg-dark text-white">
+            <h1>IfoCup: tudo sobre a Copa do Qatar 2022</h1>
+            <p>Além disso, oferecemos à você informações sobre a história da Copa do Mundo de futebol, e também  curiosidades sobre o país que irá sediar
+                o evento esse ano.</p>
+        </div>
+        
+        <div class="navegacao">
+            
+            <div class="container-fluid bg-light font-purple" style="padding:50px 20px;">
+                <div class="container">
+                    <h3 sub-3>Grupos</h3>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <table class="table text-white table-gp">
+                                <thead>
+                                    <tr>
+                                        <td><h5 class="text-center">Grupo A</h5></td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="row text-center">
+                                                <div class="col-sm-6 text-center">
+                                                    <img alt="Bandeira do Catar" src="data:image/png;base64,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">
+                                                    <p>Qatar</p>
+                                                </div>
+                                                <div class="col-sm-6 text-center">
+                                                    <img alt="Bandeira do Equador" src="data:image/png;base64,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">
+                                                    <p>Equador</p>
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="row text-center">
+                                                <div class="col-sm-6 text-center">
+                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAAEZ0FNQQAAsY58+1GTAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAAOxAAADsQBlSsOGwAABBRJREFUeNrtWElrFEEUflXTHTSRiBoVF1TmFPAS0eCCiKgYF5SAKKgXRe8avRlRcLmIigFB8OAC/oAortHgzYgLLnhxmwxEUUEjaiYxmU4/36Qnk+6Z6qquno6Tw9TQXdNVvXzfe+979boByq3cimpMNJhMJjdStx8RF1I/qcQYu2l7SljOxuPxNiWBRCJxgjHWPBatTSSOEInjvgQI/GYCf91G2772sd26+/kZ/96XMrIXOzcBp3+3k+ff3qcPNv9tZZcz5pmm3ZRqy25Yi+mtW2LAOCccDW5PGB42jB3I9Jfe3bEuv31YMfJoLCAAGC0BO5UaNrN3uocMePEqGJaVtnZs51mMOQL5KOozu9ZkR8wNfiw0fus2c2P0I1CZ2f3s/xtzgx+2fknj/2v3cLRMdo8bwpNdVneDzxH6f6pVnmL4qF1KSkRZHv+gGFecJiHCg90PdSGoEImPQ4SqMoTU9iutPoxwHsUAYVRCAihfDTVB46gSNIInBAxgcQyvj/wFDFHch81CYn2owI9+WPHgdkJN8ABfegF+/EWNbBQRART81DoovMuNToSbSQ2d+IVPJB5AzG1BwGfa9U4bWjuLXNQURLQ1MPJoObAvKYQn35AqXCeMpozTtH7kWUgy15MGePUdPWe1ddlgo4PnwhuElbO81yyYClBlBLC6gpARxrn5HppgArz/hdD82IY+q7DsOPMS4fQL56iSnnhqGYPlM1hhlpKB1UmjemHljO+qZVA/jcPu9kH48CsvR2WvraW36yur+VAvNVOxInYLtlC4buBeQc+nSv1hYwxWzWYF4NfPZTQnAh/e+loe8C/yvGNVJoLJC71WwRHGG0wdrKhXmQZeB1C4CGHB8Z8B8sJnx2uLpjGoq3Hud78LSR+K1Rn1CUWgAS+YewR0YBDhQB2DQws52DR37KkN518jPPhkw6Z5TJ0mNLwQah2Q5apM7m/dwGHFzBGgJxZzSqM2tBO5TfNCgI5OA+p2tJ4P6SA/vNaQsJdOD1iRjvY6IGsOeHHBV2UGfJoAvN9bYuQa0KlWPeMSi8s+KBShgSDANcFrflIpch3AkMAl4GWhgxF8lQjngQjAR+YBLObtShYyCvAI/1MDOuDF40LwRa/EocCjRJio1hmGFHHxr9qoyCia4KNYidVhFSQVBvxcExC8qBrty+yqzYpB9fuAuyIVWBzDplUxeKyZaGX//vQlwBh7nukb5yyxVGW2r8VRVXZL5vwsT/+thjW2G6NfCJ2jbfnBum0mWb2/Ndlh/h7oz5F0v46k06piC5UR7/6fRh+hV1cO4sZ1Ft+7x3RhBBGmoZZIJE4Ty4MwBhsZ9WQ8Hj/sHovln9TS0tLW1NT0hkjMpMOptJklxt1L2yMCv4/AX4ByK7do2z+/CLr2TBjEIwAAAABJRU5ErkJggg==" alt="Bandeira de Senegal">
+                                                    <p>Senegal</p>
+                                                </div>
+                                                <div class="col-sm-6 text-center">
+                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAIGNIUk0AAHomAACAhAAA+gAAAIDoAAB1MAAA6mAAADqYAAAXcJy6UTwAAAAEZ0FNQQAAsY58+1GTAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAuRJREFUeNrtmU1o1EAUx2fSqVtFBLv2IoiYu4JoKUJvIhWFQtGL53rwpqtHPy7Wm4gLQkE8eC9Ie9DDehAERSjeeg4riijUrXvoh5LNc9LuRxLfzLw00eQwr81OOpnM/P5vJm/fpIxZs5bJOFbZbDYvyuIGAJyS5cGCGVvyWJYsj1zXbRgFeJ43xzm/XUZvSxH3pIj7SgESflrCL0EQQGvxVaf99p3Taa05DLbv7nWS7Hbnt18PvdHi7QH6l+L99OqT7XfuEYeqwejU2aB6eXpIsnF5fSo6EyKmhvObYbm6sOSvLiwOR0ZTC8BAtfWIAE17/9OG8/Xpcwd83x+7ckl0GfsCnIQ7x8OPn403IglYtP142XCijCoB+7ZVt9sc82aR9vvb9x7raLReKJ4W9Bz+txDCcGYBOnjq+lcCASONr3GcQwxfWeOfvj9lhNvlDJA6yjBonubk4VHS8imNAOyh1sGa4n9GE5nXMRKxUnnf8IVn6pMchdDnQ3Wu8P6/MFRA9fRJPNiBIgSqvitAJT4qTHU+6Bs0TkUFTDx7UsrcX6b5OUWhEpkVYAVYAVaAFWAFWAFFGpoLzd59od9nA35Ft+UF5MLfySzgW+JuOXdtnCZgeeVLmgwbQ1clq7G2gLypw9oO6ogCqPsRE3haeGPfmXZkpk6J4Dr4wf4HEZpmP0BVz4DwSicP+LxmgBH27mnBSfAaJSItqPHtCgNtO8zrFHiVBvIMmKbTBJ4FPvUSyhSFDOC7gdfxiFwikPKtCpCfEzM8kFKJzfBjpOJsAYv/qKAj/7yJgZu8ntbzB/bvWe+erikFcM4/huW5iSMdE7DK4xi4bslQ4MN7zp85GmNULaHH8pi8OnOiAhCsv/7wWWz+8iv6pQOZwyrT5EF7R8TWhcljndmZ45UI48DpyYE9z3soVd4qY+YpnfXAdd070bqhZKN6vd6o1WorUsRh+eeYPIYL5t6Qx3sJf13CzzNr1vK1P4HYSaUMr7PxAAAAAElFTkSuQmCC" alt="Bandeira da Holanda">
+                                                    <p>Holanda</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <div class="col-sm-3">
+                            <table class="table text-white table-gp">
+                                <thead>
+                                    <tr>
+                                        <td><h5 class="text-center">Grupo B</h5></td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="row text-center">
+                                                <div class="col-sm-6 text-center">
+                                                    <img alt="Bandeira da Inglaterra" src="https://ssl.gstatic.com/onebox/media/sports/logos/DTqIL8Ba3KIuxGkpXw5ayA_48x48.png">
+                                                    <p>Inglaterra</p>
+                                                </div>
+                                                <div class="col-sm-6 text-center">
+                                                    <img alt="Bandeira do Irã" src="https://ssl.gstatic.com/onebox/media/sports/logos/1oq8Fy7ETpBpZNaCA22ArQ_48x48.png">
+                                                    <p>Irã</p>
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="row text-center">
+                                                <div class="col-sm-6 text-center">
+                                                    <img src="https://ssl.gstatic.com/onebox/media/sports/logos/wj9uZvn_vZrelLFGH8fnPA_48x48.png" alt="Bandeira dos Estados Unidos">
+                                                    <p>Estados Unidos</p>
+                                                </div>
+                                                <div class="col-sm-6 text-center">
+                                                    <img src="https://ssl.gstatic.com/onebox/media/sports/logos/1JjnDm6Es30LryHzbudyEw_48x48.png" alt="Bandeira do País de Gales">
+                                                    <p>País de Gales</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <div class="col-sm-3">
+                            <table class="table text-white table-gp">
+                                <thead>
+                                    <tr>
+                                        <td><h5 class="text-center">Grupo C</h5></td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="row text-center">
+                                                <div class="col-sm-6 text-center">
+                                                    <img alt="Bandeira da Argentina" src="https://ssl.gstatic.com/onebox/media/sports/logos/1xBWyjjkA6vEWopPK3lIPA_48x48.png">
+                                                    <p>Argentina</p>
+                                                </div>
+                                                <div class="col-sm-6 text-center">
+                                                    <img alt="Bandeira do Arábia Saudita" src="https://ssl.gstatic.com/onebox/media/sports/logos/QoAJxO46fHid3_T-7nRZ0Q_48x48.png">
+                                                    <p>Arábia Saudita</p>
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="row text-center">
+                                                <div class="col-sm-6 text-center">
+                                                    <img alt="Bandeira do México" src="https://ssl.gstatic.com/onebox/media/sports/logos/yJF9xqmUGenD8108FJbg9A_48x48.png">
+                                                    <p>México</p>
+                                                </div>
+                                                <div class="col-sm-6 text-center">
+                                                    <img alt="Bandeira da Polônia" src="https://ssl.gstatic.com/onebox/media/sports/logos/yTS_Piy3M1wUBnqU0n5aAw_48x48.png">
+                                                    <p>Polônia</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="col-sm-3">
+                            <table class="table text-white table-gp">
+                                <thead>
+                                    <tr>
+                                        <td><h5 class="text-center">Grupo D</h5></td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="row text-center">
+                                                <div class="col-sm-6 text-center">
+                                                    <img alt="Bandeira da França" src="https://ssl.gstatic.com/onebox/media/sports/logos/z3JEQB3coEAGLCJBEUzQ2A_48x48.png">
+                                                    <p>França</p>
+                                                </div>
+                                                <div class="col-sm-6 text-center">
+                                                    <img alt="Bandeira da Austrália" src="https://ssl.gstatic.com/onebox/media/sports/logos/jSgw5z0EPOLzdUi-Aomq7Q_48x48.png">
+                                                    <p>Austrália</p>
+                                                </div>
+                                            </div>
+                                            <div class="row text-center">
+                                                <div class="col-sm-6 text-center">
+                                                    <img src="https://ssl.gstatic.com/onebox/media/sports/logos/LaOvu-pyRqRso6uzff55XA_48x48.png" alt="Bandeira da Dinamarca">
+                                                    <p>Dinamarca</p>
+                                                </div>
+                                                <div class="col-sm-6 text-center">
+                                                    <img src="https://ssl.gstatic.com/onebox/media/sports/logos/Xs33c9XVUJBX0IkeFn_bIw_48x48.png" alt="Bandeira da Tunísia">
+                                                    <p>Tunísia</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <table class="table text-white table-gp">
+                                <thead>
+                                    <tr>
+                                        <td><h5 class="text-center">Grupo E</h5></td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="row text-center">
+                                                <div class="col-sm-6 text-center">
+                                                    <img alt="Bandeira da Espanha" src="https://ssl.gstatic.com/onebox/media/sports/logos/5hLkf7KFHhmpaiOJQv8LmA_48x48.png">
+                                                    <p>Espanha</p>
+                                                </div>
+                                                <div class="col-sm-6 text-center">
+                                                    <img alt="Bandeira da Costa Rica" src="https://ssl.gstatic.com/onebox/media/sports/logos/ixZiM5pj2IvvYc15k-zfeQ_48x48.png">
+                                                    <p>Costa Rica</p>
+                                                </div>
+                                            </div>
+                                            <div class="row text-center">
+                                                <div class="col-sm-6 text-center">
+                                                    <img src="https://ssl.gstatic.com/onebox/media/sports/logos/h1FhPLmDg9AHXzhygqvVPg_48x48.png" alt="Bandeira da Alemanha">
+                                                    <p>Alemanha</p>
+                                                </div>
+                                                <div class="col-sm-6 text-center">
+                                                    <img src="https://ssl.gstatic.com/onebox/media/sports/logos/by4OltvtZz7taxuQtkiP3A_48x48.png" alt="Bandeira do Japão">
+                                                    <p>Japão</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <div class="col-sm-3">
+                            <table class="table text-white table-gp">
+                                <thead>
+                                    <tr>
+                                        <td><h5 class="text-center">Grupo F</h5></td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="row text-center">
+                                                <div class="col-sm-6 text-center">
+                                                    <img alt="Bandeira da Bélgica" src="https://ssl.gstatic.com/onebox/media/sports/logos/6SF7yEoB60bU5knw-M7R5Q_48x48.png">
+                                                    <p>Bélgica</p>
+                                                </div>
+                                                <div class="col-sm-6 text-center">
+                                                    <img alt="Bandeira do Canadá" src="https://ssl.gstatic.com/onebox/media/sports/logos/H23oIEP6qK-zNc3O8abnIA_48x48.png">
+                                                    <p>Canadá</p>
+                                                </div>
+                                            </div>
+                                            <div class="row text-center">
+                                                <div class="col-sm-6 text-center">
+                                                    <img alt="Bandeira do Marrocos" src="https://ssl.gstatic.com/onebox/media/sports/logos/I3gt2Ew39ux3GGdZ-4JE3g_48x48.png">
+                                                    <p>Marrocos</p>
+                                                </div>
+                                                <div class="col-sm-6 text-center">
+                                                    <img alt="Bandeira da Croácia" src="https://ssl.gstatic.com/onebox/media/sports/logos/9toerdOg8xW4CRhDaZxsyw_48x48.png">
+                                                    <p>Croácia</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="col-sm-3">
+                            <table class="table text-white table-gp">
+                                <thead>
+                                    <tr>
+                                        <td><h5 class="text-center">Grupo G</h5></td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="row text-center">
+                                                <div class="col-sm-6 text-center">
+                                                    <img alt="Bandeira do Brasil" src="https://ssl.gstatic.com/onebox/media/sports/logos/zKLzoJVYz0bb6oAnPUdwWQ_48x48.png">
+                                                    <p>Brasil</p>
+                                                </div>
+                                                <div class="col-sm-6 text-center">
+                                                    <img alt="Bandeira da Sérvia" src="https://ssl.gstatic.com/onebox/media/sports/logos/xyh1vmZ-xJH2iJCKjqS1Ow_48x48.png">
+                                                    <p>Sérvia</p>
+                                                </div>
+                                            </div>
+                                            <div class="row text-center">
+                                                <div class="col-sm-6 text-center">
+                                                    <img alt="Bandeira da Suíça" src="https://ssl.gstatic.com/onebox/media/sports/logos/1hy9ek4dOIffYULM6k1fqg_48x48.png">
+                                                    <p>Suíça</p>
+                                                </div>
+                                                <div class="col-sm-6 text-center">
+                                                    <img alt="Bandeira de Camarões" src="https://ssl.gstatic.com/onebox/media/sports/logos/fmHyTSbJ-cYbY6WJzvqaZQ_48x48.png">
+                                                    <p>Camarões</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="col-sm-3">
+                            <table class="table text-white table-gp">
+                                <thead>
+                                    <tr>
+                                        <td><h5 class="text-center">Grupo H</h5></td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="row text-center">
+                                                <div class="col-sm-6 text-center">
+                                                    <img alt="Bandeira de Portugal" src="https://ssl.gstatic.com/onebox/media/sports/logos/HJ3_2c4w791nZJj7n-Lj3Q_48x48.png">
+                                                    <p>Portugal</p>
+                                                </div>
+                                                <div class="col-sm-6 text-center">
+                                                    <img alt="Bandeira de Gana" src="https://ssl.gstatic.com/onebox/media/sports/logos/VJQ1emg0TOubjGnap4vWuw_48x48.png">
+                                                    <p>Gana</p>
+                                                </div>
+                                                </div>
+                                            </div>
+                                            <div class="row text-center">
+                                                <div class="col-sm-6 text-center">
+                                                    <img alt="Bandeira do Uruguai" src="https://ssl.gstatic.com/onebox/media/sports/logos/KnSUdQWiGRoy89q4x85IgA_48x48.png">
+                                                    <p>Uruguai</p>
+                                                </div>
+                                                <div class="col-sm-6 text-center">
+                                                    <img alt="Bandeira da Coreia do Sul" src="https://ssl.gstatic.com/onebox/media/sports/logos/Uu5pwNmMHGd5bCooKrS3Lw_48x48.png">
+                                                    <p>Coreia do Sul</p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="row text-center">
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-4">
+                            
+                        </div>
+
+                        <div class="col-sm-4 text-center">
+                            
+                        </div>
+                    </div>
+                    <div class="col-sm-2"></div>
+                </div>
+            </div>
+
+            <div class="container-fluid bg-purple">
+                <div class="container p-5">
+                    <h3>Alguns detalhes Qatar 2022</h3>
+                    <div class="row p-4">
+                        <div class="col-sm-4">
+                            <h4>Mascote</h4>
+                            <div class="text-center p-3">
+                                <img class="img-fluid img-cnt" src="https://midias.correiobraziliense.com.br/_midias/jpg/2022/04/01/766x527/1_mascote_copa_do_mundo_catar-7685385.jpeg" alt="Mascote La'eeb">
+                                <p class="caption-img">Mascote La'eeb (Fonte: GE/Globo).</p>
+                            </div>
+                            <p>O mascote chama-se La'eeb, que significa "jogador muito abilidoso", 
+                                e faz referência a um Hijab (espécie de véu, comumente usado na região).</p>
+                        </div>
+                        <div class="col-sm-4">
+                            <h4>Bola</h4>
+                            <div class="text-center p-3">
+                                <img class="img-fluid img-cnt spc" src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/4e9f4bf4ae664b0798d4ae6201337d82_9366/Bola_Al_Rihla_League_Branco_H57791_01_standard.jpg" alt="Bola Al'Rihla">
+                                <p class="caption-img">Al'Rihla, bola da Copa (Fonte: Adidas).</p>
+                            </div>
+                            <p>Foi desenvolvida pela Adidas, e recebeu o nome de Al'Rihla, que significa "a jornada". Teve como
+                                referência para sua criação elementos como a arquitetura, a prórpia bandeira do Qatar e também barcos da região.
+                            </p>
+                        </div>
+                        <div class="col-sm-4">
+                            <h4>Estádios</h4>
+                            <p>Foram construídos 8 estádios para o evento. Um deles, é o Al Thumama, que foi inspirado nos padrões de um tecido chamado Gahfiya, usado
+                                por homens muçulmanos da região.</p>
+                            <div class="text-center p-3">
+                                <img class="img-fluid img-cnt" src="https://images.adsttc.com/media/images/61d2/b31c/3e4b/3194/cc00/00de/newsletter/Al-Thumama-Stadium-homepage-dusk.jpg?1641198358" alt="Estádio Al Thumama ">
+                                <p class="caption-img">Estádio Al Thumama (Fonte: ArchDaily).</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="container-fluid bg-dark" style="padding:50px 20px;">
+                <div class="container">
+                    <h3 class="sub-3 text-white">Mais conteúdos</h3>
+                    <div class="row ">
+                        <div class="col-sm-3">
+                            <div class="card p-2" style="width: 18rem;">
+                                <img src="https://entendaantes.com.br/wp-content/uploads/2019/07/objetos-que-prejudicam-na-hora-dos-estudos.jpg" class="card-img-top" alt="Mesa de estudos">
+                                <div class="card-body">
+                                    <h5 class="text-center">Sobre o projeto</h5>
+                                    <p class="card-text content-n">Para obter mais informações sobre o objetivo do projeto e sobre seu desenvolvedor.</p>
+                                    <div class="text-center">
+                                        <button class="btn-card" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">SAIBA MAIS</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="card p-2" style="width: 18rem;">
+                                <img src="https://www.opovo.com.br/esportesimages/app/noticia_14970375377/2018/06/30/29092/cafu-penta-copa-brasil-afp.jpeg" class="card-img-top" alt="Comemoração do último título do Brasil">
+                                <div class="card-body">
+                                    <h5 class="text-center">História</h5>
+                                    <p class="card-text content-n">Saiba mais sobre a história do maior evento esportivo do mundo.</p>
+                                    <div class="text-center">
+                                        <button class="btn-card" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">SAIBA MAIS</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="card" style="width: 18rem;">
+                                <img src="https://vidanamala.com.br/wp-content/uploads/2019/03/w-3b.jpg" class="card-img-top" alt="Cidade de Doha">
+                                <div class="card-body">
+                                    <h5 class="text-center">Catar</h5>
+                                    <p class="card-text content-n">Conheça mais o país-sede da copa.</p>
+                                    <div class="text-center">
+                                        <button class="btn-card" data-bs-toggle="modal" data-bs-target="#staticBackdrop3">SAIBA MAIS</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="card" style="width: 18rem;">
+                                <img src="https://static.vecteezy.com/ti/vetor-gratis/p1/667782-conceito-de-perguntas-frequentes-metafora-da-pergunta-e-resposta-vetor.jpg" class="card-img-top" alt="Comemoração do último título do Brasil">
+                                <div class="card-body">
+                                    <h5 class="text-center">Entre em contato</h5>
+                                    <p class="card-text content-n">Entre em contato conosco para relatar problemas na utilização.</p>
+                                    <div class="text-center">
+                                        <button class="btn-card" data-bs-toggle="modal" data-bs-target="#staticBackdrop4">SAIBA MAIS</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h3 class="gradient" id="staticBackdropLabel">Informações do projeto</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Este site é um projeto da disciplina de Design e Usabilidade do IFPE Campus Garanhuns, ministrada pelo Prof. Jair Galvão.</p>
+                    <h5 class="gradient" >Sobre o desenvolvedor:</h5>
+                    <div class="text-center p-3">
+                        <img src="../imgs/me.png" class="img-me">
+                    </div>
+                    <p>Maycon Cordeiro, estudante do 4° Técninco em Informática integrado ao Ensino Médio - Tarde.</p>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h3 class="gradient" id="staticBackdropLabel">História da Copa do Mundo</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>O futebol sempre foi um esporte que gerou interesse e mobilização na população em geral, e em 1904 foi criada a Federação
+                        Internacional de Futebol, que tinha como objetivo organizar esse esporte a nível mundial. Esse esporte já era conhecido 
+                        em outra grande competição esportiva, era uma modalidade olímpica desde 1900.
+                    </p>
+                    <p>A primeira edição da Copa do Mundo de Futebol ocorreu no Uruguai, em 1930, e foi organizada por Jumes Rimet, um francês,
+                        presidente da FIFA no período citado. 13 países participaram da estreia desse campeonato, e a
+                        primeira seleção a consagra-se campeã desse campeonato foi a uruguaia.
+                    </p>
+                    <div class="text-center">
+                        <img alt="Bolas usadas em todas as edições da copa do mundo" class="img-modal img-fluid" src="https://static.wixstatic.com/media/d63314_275cddef81b84ba3b8bc4da4be9be6ec~mv2.jpg/v1/fill/w_960,h_716,al_c,q_90/d63314_275cddef81b84ba3b8bc4da4be9be6ec~mv2.jpg">
+                        <p class="caption-img">Bolas das respectivas edições da Copa do Mundo (Fonte: Educação Física SEED PR).</p>
+                    </div>
+                    <p>O Brasil sediou esse evento pela primeira vez em 1950, num contexto de pós-Segunda Guerra Mundial.
+                        a seleção brasileira chegou à final, mas os cerda de 200 mil espectadores que assistiram a esse fatídico jogo,
+                        presenciaram a derrota brasileira para a seleção do Uruguai, que escrevia em na história seu bicampeonato.
+                    </p>
+                    <p>Foi somente na edição de 1958, na Suécia, que o Brasil ganhou sua primeira Copa do Mundo, fato que marcou 
+                        o inicio da grande história que o Brasil escreveu no esporte e na competição.</p>
+                    <div class="text-center">
+                        <img alt="Pôster com os jogadores da seleção da época" class="img-modal img-fluid" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Werner_Haberkorn_-_Salve_Copa_do_Mundo_-_Brasil_Campe%C3%A3o_Mundial_1958%2C_Acervo_do_Museu_Paulista_da_USP_%28cropped%29.jpg/600px-Werner_Haberkorn_-_Salve_Copa_do_Mundo_-_Brasil_Campe%C3%A3o_Mundial_1958%2C_Acervo_do_Museu_Paulista_da_USP_%28cropped%29.jpg">
+                        <p class="caption-img">Seleção Brasileira de Futebol de 1958 (Fonte: Wikipedia).</p>
+                    </div>
+                    <p>O Brasil ainda ganhou as edições de: 1962(Chile), 1970(México), 1994(Estados Unidos) e 2002(Coreia do Sul e Japão).</p>
+                    <p>A úlitma vez que o Brasil sediou uma edição da Copa do Mundo foi em 2014, nessa edição a seleção nacional foi eliminada pelos 
+                        alemães, com o fatídico placar de 7x1.</p>
+                    <div class="text-center">
+                        <img alt="" class="img-modal img-fluid" src="https://conteudo.imguol.com.br/c/copadomundo/2018/Imagem/19/2018/07/15/jogadores-da-franca-comemoram-a-conquista-da-copa-do-mundo-de-2018-na-russia-1531676763801_v2_450x337.jpg">
+                        <p class="caption-img">Franceses comemorando o título da Copa de 2018.</p>
+                    </div>
+                    <p>A seleção da França levou a melhor na última edição do Mundial, que ocorreu na Rússia, e são os últimos campeões do campeonato.</p>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="staticBackdrop3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="gradient" id="staticBackdropLabel">Conheça o Catar</h3>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                        <div class="modal-body">
+                            <p>O Catar se localiza na Ásia Ocidental, e apesar de ser considerado um país pequeno (em relação ao número de habitantes), 
+                                é um dos países mais ricos do mundo, e o elemento que faz parte da construção dessa riqueza é a abundância de recursos naturais
+                                tais como petróleo e gás natural. 
+                            </p>
+                            <div class="text-center">
+                                <img alt="Bandeira do Catar" class="img-fluid img-modal" src="https://s1.static.brasilescola.uol.com.br/be/conteudo/images/bandeira-do-catar.jpg">
+                                <p class="caption-img">Bandeira do Catar (Fonte: Brasil Escola).</p>
+                            </div>
+                            <p>É um país independente desde 1971, quando disvinculou-se da Inglaterra e a família Al Thani tomou o poder.
+                                Essa família monopoliza o poder a cerca de 150 anos, e a forma de governo é a monarquia.
+                            </p>
+                            <p>O país possui um clima desértico, e no verão, os termômetros chegam a registrar temperaturas próximas a 45°C. Por conta do fator
+                                climático, a Copa do Mundo mudou de data de acontecimento, antes costumava ocorrer entre os meses de junho e julho, mas vai ocorrer
+                                nos meses de novembro e dezembro e no período da noite, quando as temperaturas são mais amenas.
+                            </p>
+                            <div class="text-center">
+                                    <img alt="Imagem panorâmica de uma parte da cidade" class="img-fluid img-modal" src="https://a.cdn-hotels.com/gdcs/production153/d666/2145e12f-c11d-4484-a256-7841348de51d.jpg?impolicy=fcrop&w=800&h=533&q=medium">
+                                    <p class="caption-img">Vista paradisíaca de uma região de Doha (Fonte - Vou na janela).</p>
+                            </div>
+                            <p>A capital Doha possui um estilo de arquitetura único, recheado de luxo e modernidade que atrai muitos turistas, interessados em conhecer mais
+                                sobre as paisagens locais.
+                            </p>
+                            <div class="text-center">
+                                <img alt="Museu Nacional do Catar" class="img-fluid img-modal" src="https://ep00.epimg.net/elpais/imagenes/2019/03/27/album/1553699281_141810_1553703767_album_normal.jpg">
+                                <p class="caption-img">Museu Nacional do Catar (Fonte - El País).</p>
+                            </div>
+                            <p>O Museu Nacional do Catar é um exemplo dessa expressão arquitetônica. A estrutura faz referência a uma pedra comum na região que é formada por milhares
+                                de grãos de areia. 
+                            </p>
+                        </div>
+                </div>
+            </div>
+            </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="staticBackdrop4" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h3 class="gradient" id="staticBackdropLabel">Entre em contato</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="p-2">
+                        <label class="form-label">Nome:</label>
+                        <input class="form-control" type="text" placeholder="Digite seu nome">
+                    </div>
+                    <div class="p-2">
+                        <label class="form-label">Email:</label>
+                        <input class="form-control" type="email" placeholder="Digite seu email">
+                    </div>
+                    <div class="p-2">
+                        <label class="form-label">Digite sua dúvida:</label>
+                        <textarea class="form-control" rows="3" placeholder="Digite sua dúvida"></textarea>
+                    </div>
+                    <div class="p-2">
+                        <button class="btn-submit">Enviar</button>  
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        
+    </body>
+</html>
